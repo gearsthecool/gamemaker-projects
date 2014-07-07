@@ -12,7 +12,6 @@
     <sprites name="Player">
       <sprite>sprites\spr_turret</sprite>
       <sprite>sprites\spr_bullet</sprite>
-      <sprite>sprites\sprite5</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
