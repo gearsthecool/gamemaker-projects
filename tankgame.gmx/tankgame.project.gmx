@@ -4,18 +4,39 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Players">
       <sprite>sprites\spr_player1</sprite>
       <sprite>sprites\spr_player2</sprite>
     </sprites>
+    <sprites name="bullets">
+      <sprite>sprites\spr_redbullet</sprite>
+      <sprite>sprites\spr_bluebullet</sprite>
+    </sprites>
+    <sprite>sprites\spr_barrier</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\background0</background>
+    <background>background\background1</background>
+  </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\Tank_Movment.gml</script>
+  </scripts>
   <objects name="objects">
-    <object>objects\obj_player1</object>
-    <object>objects\obj_player2</object>
+    <objects name="Player_1">
+      <object>objects\obj_player1</object>
+      <object>objects\obj_redbullet</object>
+    </objects>
+    <objects name="Player_2">
+      <object>objects\obj_player2</object>
+      <object>objects\obj_bluebullet</object>
+    </objects>
+    <object>objects\obj_barrier</object>
+    <object>objects\object5</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
