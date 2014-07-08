@@ -8,6 +8,10 @@
   <sprites name="sprites">
     <sprites name="Aliens">
       <sprite>sprites\spr_enemy1</sprite>
+      <sprite>sprites\sprite3</sprite>
+      <sprite>sprites\sprite4</sprite>
+      <sprite>sprites\sprite5</sprite>
+      <sprite>sprites\sprite6</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_turret</sprite>
@@ -24,12 +28,15 @@
   <objects name="objects">
     <objects name="Aliens">
       <object>objects\object2</object>
+      <object>objects\object6</object>
       <object>objects\obj_spawner</object>
+      <object>objects\object7</object>
     </objects>
     <objects name="Player">
       <object>objects\object1</object>
     </objects>
     <object>objects\obj_bullet</object>
+    <object>objects\object9</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
