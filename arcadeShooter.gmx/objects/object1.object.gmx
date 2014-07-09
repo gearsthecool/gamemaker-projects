@@ -11,29 +11,9 @@
     <event eventtype="0" enumb="0">
       <action>
         <libid>1</libid>
-        <id>108</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_friction</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>1</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -45,11 +25,40 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>reloaded</string>
+            <string>/// setup
+
+friction = 1
+
+//needed for handle movement script
+up_key = ord ('W')
+left_key = ord ('A')
+right_key = ord ('D')
+down_key = ord ('S')
+
+// shooting
+
+shoot_key = vk_space
+</string>
           </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>701</id>
+        <kind>0</kind>
+        <userelative>-1</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>0</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_set_score</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
           <argument>
             <kind>0</kind>
-            <string>true</string>
+            <string>10</string>
           </argument>
         </arguments>
       </action>
@@ -57,25 +66,25 @@
     <event eventtype="1" enumb="0">
       <action>
         <libid>1</libid>
-        <id>331</id>
+        <id>222</id>
         <kind>0</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_restart_game</functionname>
+        <functionname>action_next_room</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
         <isnot>0</isnot>
       </action>
     </event>
-    <event eventtype="2" enumb="0">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
         <exetype>2</exetype>
@@ -87,57 +96,67 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>reloaded</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
+            <string>/// handle movement
+
+up = keyboard_check(up_key);
+down = keyboard_check(down_key);
+left = keyboard_check(left_key);
+right = keyboard_check(right_key)
+
+if (up) {
+    direction = 90; 
+}
+
+if (down) {
+    direction = 270;
+}
+    
+if (left) {
+    direction = 180;
+}
+    
+if (right) {
+    direction = 0;
+}
+
+if (right &amp;&amp; up)
+{
+    direction = 45;
+}
+
+if (left and up) {
+    direction = 135;
+}
+
+if (right and down) {
+    direction = 315;
+}
+
+if (left and down) {
+    direction = 225;
+    }
+if ((left and right) or (up and down)) {
+    speed = 0;
+ }   
+
+if ((left or right or up or down)) {
+    speed = 10;
+}
+
+image_angle = direction
+</string>
           </argument>
         </arguments>
       </action>
-    </event>
-    <event eventtype="4" ename="object9">
       <action>
         <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
+        <id>603</id>
+        <kind>7</kind>
         <userelative>0</userelative>
         <isquestion>0</isquestion>
         <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="4" ename="object2">
-      <action>
-        <libid>1</libid>
-        <id>203</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_kill_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-      </action>
-    </event>
-    <event eventtype="5" enumb="39">
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
+        <exetype>2</exetype>
+        <functionname></functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
@@ -145,67 +164,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>000001000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>7</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="37">
-      <action>
-        <libid>1</libid>
-        <id>101</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_move</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>000100000</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>7</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="5" enumb="32">
-      <action>
-        <libid>1</libid>
-        <id>612</id>
-        <kind>0</kind>
-        <userelative>0</userelative>
-        <isquestion>-1</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_if_variable</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>0</kind>
-            <string>reloaded</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>true</string>
-          </argument>
-          <argument>
-            <kind>4</kind>
-            <string>0</string>
+            <string>/// shooting
+
+shoot = keyboard_check_pressed(shoot_key)
+
+if (shoot) {
+    bullet = instance_create(x,y,obj_bullet);
+    bullet.speed = 50
+    bullet.direction = direction
+    bullet.image_angle = bullet.direction
+}
+</string>
           </argument>
         </arguments>
       </action>
@@ -225,65 +194,13 @@
       </action>
       <action>
         <libid>1</libid>
-        <id>201</id>
+        <id>702</id>
         <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
+        <userelative>0</userelative>
+        <isquestion>-1</isquestion>
+        <useapplyto>0</useapplyto>
         <exetype>1</exetype>
-        <functionname>action_create_object</functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>-1</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>10</kind>
-            <object>obj_bullet</object>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>0</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>611</id>
-        <kind>6</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>reloaded</string>
-          </argument>
-          <argument>
-            <kind>0</kind>
-            <string>false</string>
-          </argument>
-        </arguments>
-      </action>
-      <action>
-        <libid>1</libid>
-        <id>301</id>
-        <kind>0</kind>
-        <userelative>-1</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>1</exetype>
-        <functionname>action_set_alarm</functionname>
+        <functionname>action_if_score</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>
@@ -291,13 +208,27 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>10</string>
+            <string>0</string>
           </argument>
           <argument>
             <kind>4</kind>
             <string>0</string>
           </argument>
         </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
       </action>
       <action>
         <libid>1</libid>
@@ -308,6 +239,22 @@
         <useapplyto>0</useapplyto>
         <exetype>0</exetype>
         <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+      </action>
+    </event>
+    <event eventtype="4" ename="object9">
+      <action>
+        <libid>1</libid>
+        <id>203</id>
+        <kind>0</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>1</exetype>
+        <functionname>action_kill_object</functionname>
         <codestring></codestring>
         <whoName>self</whoName>
         <relative>0</relative>

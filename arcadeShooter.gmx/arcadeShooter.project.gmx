@@ -4,7 +4,9 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sound0_8bit_Dungeon_Boss</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Aliens">
       <sprite>sprites\spr_enemy1</sprite>
@@ -23,6 +25,7 @@
     <background>background\background2</background>
     <background>background\background3</background>
     <background>background\background4</background>
+    <background>background\background5</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
@@ -37,9 +40,11 @@
     </objects>
     <object>objects\obj_bullet</object>
     <object>objects\object9</object>
+    <object>objects\object8</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
+    <room>rooms\room1</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

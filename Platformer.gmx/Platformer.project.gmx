@@ -21,6 +21,9 @@
     <background>background\bck</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\player_movement.gml</script>
+  </scripts>
   <objects name="objects">
     <objects name="Player">
       <object>objects\object3</object>

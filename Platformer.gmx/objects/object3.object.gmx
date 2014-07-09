@@ -26,6 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>/// intialize
+sprite_moving = sprite1
+sprite_facing = spr_facing
 
 //our own for more control
 _friction = 2;
@@ -39,6 +41,9 @@ on_ground = false;
 move_speed = 10;
 jump_speed = 23;
 
+left_key = vk_left
+right_key = vk_right
+jump_key = vk_space
 </string>
           </argument>
         </arguments>
