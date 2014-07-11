@@ -2,7 +2,7 @@
 <object>
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -51,7 +51,7 @@
         <arguments>
           <argument>
             <kind>0</kind>
-            <string>20</string>
+            <string>100</string>
           </argument>
           <argument>
             <kind>4</kind>
@@ -75,7 +75,7 @@
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>object5</object>
+            <object>obj_alienknight</object>
           </argument>
           <argument>
             <kind>0</kind>

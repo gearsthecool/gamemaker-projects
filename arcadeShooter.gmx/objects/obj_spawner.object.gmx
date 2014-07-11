@@ -75,7 +75,7 @@
         <arguments>
           <argument>
             <kind>10</kind>
-            <object>object2</object>
+            <object>obj_aliendrone</object>
           </argument>
           <argument>
             <kind>0</kind>

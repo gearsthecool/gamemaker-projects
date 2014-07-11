@@ -5,46 +5,61 @@
   </Configs>
   <NewExtensions/>
   <sounds name="sound">
-    <sound>sound\sound0_8bit_Dungeon_Boss</sound>
+    <sound>sound\sound_gamemusic</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Aliens">
       <sprite>sprites\spr_enemy1</sprite>
-      <sprite>sprites\sprite3</sprite>
-      <sprite>sprites\sprite4</sprite>
-      <sprite>sprites\sprite5</sprite>
-      <sprite>sprites\sprite6</sprite>
+      <sprite>sprites\spr_enemy2</sprite>
     </sprites>
     <sprites name="Player">
       <sprite>sprites\spr_turret</sprite>
       <sprite>sprites\spr_bullet</sprite>
     </sprites>
+    <sprite>sprites\spr_title</sprite>
+    <sprite>sprites\spr_game</sprite>
+    <sprite>sprites\spr_credits</sprite>
+    <sprite>sprites\spr_back</sprite>
+    <sprite>sprites\spr_close</sprite>
   </sprites>
   <backgrounds name="background">
-    <background>background\background1</background>
-    <background>background\background2</background>
-    <background>background\background3</background>
-    <background>background\background4</background>
-    <background>background\background5</background>
+    <background>background\bg_main</background>
+    <background>background\bg_stars1</background>
+    <background>background\bg_stars2</background>
+    <background>background\bg_stars3</background>
+    <background>background\bg_lose</background>
+    <background>background\bg_win</background>
+    <background>background\bg_credits</background>
   </backgrounds>
   <paths name="paths"/>
+  <fonts name="fonts">
+    <font>fonts\fnt_score</font>
+  </fonts>
   <objects name="objects">
     <objects name="Aliens">
-      <object>objects\object2</object>
-      <object>objects\object6</object>
+      <object>objects\obj_aliendrone</object>
+      <object>objects\obj_alienknight</object>
       <object>objects\obj_spawner</object>
-      <object>objects\object7</object>
+      <object>objects\obj_spawner2</object>
     </objects>
     <objects name="Player">
-      <object>objects\object1</object>
+      <object>objects\obj_player</object>
     </objects>
     <object>objects\obj_bullet</object>
-    <object>objects\object9</object>
-    <object>objects\object8</object>
+    <object>objects\obj_music</object>
+    <object>objects\obj_startscreen</object>
+    <object>objects\obj_play</object>
+    <object>objects\obj_credits</object>
+    <object>objects\obj_back</object>
+    <object>objects\obj_close</object>
+    <object>objects\c_score</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\room0</room>
-    <room>rooms\room1</room>
+    <room>rooms\rm_startscreen</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_lose</room>
+    <room>rooms\rm_win</room>
+    <room>rooms\rm_credits</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
